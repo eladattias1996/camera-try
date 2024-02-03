@@ -14,6 +14,8 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-CameraTry-CameraTryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-CameraTry-CameraTryTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		91095D9627694C0191E154DB /* FaceDetectorFrameProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = E97A3207FA5B443B9479C1C9 /* FaceDetectorFrameProcessor.m */; };
+		BA3B06E08EAE46A69F399169 /* FaceDetectorFrameProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9738D95D514448E89243CF82 /* FaceDetectorFrameProcessor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-CameraTry.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CameraTry.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = CameraTry/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-CameraTry-CameraTryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CameraTry-CameraTryTests.release.xcconfig"; path = "Target Support Files/Pods-CameraTry-CameraTryTests/Pods-CameraTry-CameraTryTests.release.xcconfig"; sourceTree = "<group>"; };
+		9738D95D514448E89243CF82 /* FaceDetectorFrameProcessor.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = FaceDetectorFrameProcessor.swift; path = FaceDetectorFrameProcessor.swift; sourceTree = "<group>"; };
+		E97A3207FA5B443B9479C1C9 /* FaceDetectorFrameProcessor.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = FaceDetectorFrameProcessor.m; path = FaceDetectorFrameProcessor.m; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -106,6 +110,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4813229E610F42C692371B42 /* FaceDetectorFrameProcessor */ = {
+			isa = PBXGroup;
+			children = (
+				E97A3207FA5B443B9479C1C9 /* FaceDetectorFrameProcessor.m */,
+				9738D95D514448E89243CF82 /* FaceDetectorFrameProcessor.swift */,
+			);
+			name = FaceDetectorFrameProcessor;
+			path = FaceDetectorFrameProcessor;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +136,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				4813229E610F42C692371B42 /* FaceDetectorFrameProcessor */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -394,6 +409,8 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				91095D9627694C0191E154DB /* FaceDetectorFrameProcessor.m in Sources */,
+				BA3B06E08EAE46A69F399169 /* FaceDetectorFrameProcessor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
