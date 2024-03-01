@@ -35,10 +35,7 @@ class FaceDetectorFrameProcessorPlugin(proxy: VisionCameraProxy, options: Map<St
 
       faces.map { it.toJSObject() }
     } catch (e: Exception) {
-      // TODO: refactor to raise exception over the bridge
-      Log.e(TAG, "found error $e")
-
-      listOf<Any>()
+        throw e;
     }
   }
 
