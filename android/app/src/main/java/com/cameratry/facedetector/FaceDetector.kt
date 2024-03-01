@@ -11,15 +11,9 @@ import com.google.mlkit.vision.face.FaceDetectorOptions
 class FaceDetector {
     companion object {
         private val TAG: String = "FaceDetector"
-        private val FACE_DETECTION_OPTIONS = FaceDetectorOptions
-            .Builder()
-            .setLandmarkMode(FaceDetectorOptions.LANDMARK_MODE_ALL)
-            .setClassificationMode(FaceDetectorOptions.CLASSIFICATION_MODE_ALL)
-            .setPerformanceMode(FaceDetectorOptions.PERFORMANCE_MODE_ACCURATE)
-            .build()
 
-        fun detectFaces(image: InputImage): Task<List<Face>> {
-            val detector = FaceDetection.getClient(FACE_DETECTION_OPTIONS)
+        fun detectFaces(image: InputImage, options: FaceDetectorOptions): Task<List<Face>> {
+            val detector = FaceDetection.getClient(options)
             val taskCompletionSource = TaskCompletionSource<List<Face>>()
 
             detector.process(image)

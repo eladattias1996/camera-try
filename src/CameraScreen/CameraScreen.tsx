@@ -6,8 +6,9 @@ import {
 } from 'react-native-vision-camera';
 import {DeviceNotFound} from './components/DeviceNotFound';
 import {StyleSheet} from 'react-native';
-import {detectFaces} from './plugins/plugins';
+import {detectFaces} from '../utils/faceDetection/plugins/plugins';
 import {useAppState} from '@react-native-community/hooks';
+import {FACE_DETECTION_OPTIONS} from './constants/faceDetection';
 
 export const CameraScreen: FC = () => {
   const device = useCameraDevice('front');
@@ -16,7 +17,7 @@ export const CameraScreen: FC = () => {
   const frameProcessor = useFrameProcessor(frame => {
     'worklet';
 
-    const result = detectFaces(frame);
+    const result = detectFaces(frame, FACE_DETECTION_OPTIONS);
 
     console.log('the number of faces is', result);
   }, []);
