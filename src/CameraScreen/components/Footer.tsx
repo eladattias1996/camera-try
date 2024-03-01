@@ -1,14 +1,32 @@
 import {FC} from 'react';
-import {Button, StyleSheet, View} from 'react-native';
+import {
+  Button,
+  StyleSheet,
+  TouchableOpacity,
+  View,
+  ViewProps,
+} from 'react-native';
 
 interface Props {
   captureDisabled?: boolean;
   onCapturePress: () => void;
+  style?: ViewProps['style'];
 }
 
-const Footer: FC<Props> = ({captureDisabled = false, onCapturePress}) => (
-  <View style={styles.container}>
-    <Button title="צלם" disabled={captureDisabled} onPress={onCapturePress} />
+const BUTTON_SIZE = 60;
+
+const Footer: FC<Props> = ({
+  captureDisabled = false,
+  onCapturePress,
+  style,
+}) => (
+  <View style={[styles.container, style]}>
+    <TouchableOpacity
+      style={[styles.button, captureDisabled && styles.buttonDisabled]}
+      disabled={captureDisabled}
+      onPress={onCapturePress}
+      activeOpacity={0.5}
+    />
   </View>
 );
 
@@ -17,6 +35,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 16,
+  },
+  button: {
+    backgroundColor: 'white',
+    height: BUTTON_SIZE,
+    width: BUTTON_SIZE,
+    borderRadius: BUTTON_SIZE,
+  },
+  buttonDisabled: {
+    backgroundColor: 'lightgrey',
   },
 });
 
