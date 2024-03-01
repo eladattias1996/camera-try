@@ -7,7 +7,7 @@ import {
   useFrameProcessor,
 } from 'react-native-vision-camera';
 import {getHintMessage} from '../utils/utils';
-import {FaceDetectionError, NoCameraDeviceFound} from '../errors/errors';
+import {NoCameraDeviceFound} from '../errors/errors';
 import {detectFaces} from '../../utils/faceDetection';
 import {FACE_DETECTION_OPTIONS} from '../constants/faceDetection';
 import {Controls, Hint} from '../components';
@@ -32,7 +32,7 @@ const FaceDetectionCamera: FC = () => {
       try {
         const faces = detectFaces(frame, FACE_DETECTION_OPTIONS);
 
-        console.log('here with faces', faces);
+        console.log('here with faces', JSON.stringify(faces, null, 2));
 
         updateNumberOfFaces(faces.length);
       } catch (e: unknown) {
