@@ -1,6 +1,6 @@
 import React, {ComponentType, FC} from 'react';
 import {useCameraPermission} from 'react-native-vision-camera';
-import {NoPermissionsPlaceholder} from '../components/NoPermissionsPlaceholder';
+import {NoPermissionsPlaceholder} from '../components';
 
 interface Props {
   Component: ComponentType;

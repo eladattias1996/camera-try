@@ -4,15 +4,13 @@ import {
   useCameraDevice,
   useFrameProcessor,
 } from 'react-native-vision-camera';
-import {DeviceNotFound} from './components/DeviceNotFound';
 import {StyleSheet, View} from 'react-native';
 import {detectFaces} from '../utils/faceDetection';
 import {useAppState} from '@react-native-community/hooks';
 import {FACE_DETECTION_OPTIONS} from './constants/faceDetection';
-import Controls from './components/Controls';
 import {Worklets} from 'react-native-worklets-core';
-import Hint from './components/Hint';
 import {getHintMessage} from './utils/utils';
+import {Controls, DeviceNotFound, Hint} from './components';
 
 export const CameraScreen: FC = () => {
   const device = useCameraDevice('front');
