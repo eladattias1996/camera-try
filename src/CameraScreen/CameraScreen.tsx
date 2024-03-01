@@ -29,6 +29,7 @@ export const CameraScreen: FC = () => {
       style={styles.fullScreen}
       device={device}
       frameProcessor={frameProcessor}
+      pixelFormat="yuv"
     />
   );
 };
