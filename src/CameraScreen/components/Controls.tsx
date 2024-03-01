@@ -15,7 +15,7 @@ interface Props {
 
 const BUTTON_SIZE = 60;
 
-const Footer: FC<Props> = ({
+const Controls: FC<Props> = ({
   captureDisabled = false,
   onCapturePress,
   style,
@@ -47,4 +47,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Footer;
+export default Controls;
