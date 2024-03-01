@@ -9,7 +9,7 @@ import {StyleSheet, View} from 'react-native';
 import {detectFaces} from '../utils/faceDetection';
 import {useAppState} from '@react-native-community/hooks';
 import {FACE_DETECTION_OPTIONS} from './constants/faceDetection';
-import Footer from './components/Footer';
+import Controls from './components/Controls';
 import {Worklets} from 'react-native-worklets-core';
 import Hint from './components/Hint';
 import {getHintMessage} from './utils/utils';
@@ -49,7 +49,7 @@ export const CameraScreen: FC = () => {
         pixelFormat="yuv"
       />
       {hintMessage && <Hint message={hintMessage} style={styles.header} />}
-      <Footer
+      <Controls
         style={styles.footer}
         captureDisabled={captureDisabled}
         onCapturePress={() => console.log('capture pressed')}
