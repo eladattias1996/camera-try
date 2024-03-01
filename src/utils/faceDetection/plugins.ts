@@ -1,5 +1,5 @@
 import {VisionCameraProxy, Frame} from 'react-native-vision-camera';
-import {FaceDetectionOptions} from '../types/types';
+import {FaceDetectionOptions} from './types';
 
 const plugin = VisionCameraProxy.initFrameProcessorPlugin('detectFaces');
 
