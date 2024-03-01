@@ -26,9 +26,3 @@ export type FaceDetectionOptions = {
   trackingEnabled?: boolean;
   minFaceSize?: number;
 };
-
-export interface Face {
-  rightEyeOpenProbability?: number;
-  leftEyeOpenProbability?: number;
-  smilingProbability?: number;
-}
