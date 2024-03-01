@@ -3,7 +3,7 @@ import {
   FaceDetectionOptions,
   LandmarkMode,
   PerformanceMode,
-} from '../../utils/faceDetection/types/types';
+} from '../../utils/faceDetection';
 
 export const FACE_DETECTION_OPTIONS: FaceDetectionOptions = {
   landmarkMode: LandmarkMode.ALL,

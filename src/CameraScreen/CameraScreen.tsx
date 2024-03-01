@@ -6,7 +6,7 @@ import {
 } from 'react-native-vision-camera';
 import {DeviceNotFound} from './components/DeviceNotFound';
 import {StyleSheet} from 'react-native';
-import {detectFaces} from '../utils/faceDetection/plugins/plugins';
+import {detectFaces} from '../utils/faceDetection';
 import {useAppState} from '@react-native-community/hooks';
 import {FACE_DETECTION_OPTIONS} from './constants/faceDetection';
 
